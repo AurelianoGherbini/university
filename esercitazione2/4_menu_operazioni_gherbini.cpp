@@ -7,20 +7,8 @@
 
 #include <iostream>
 using namespace std;
-
-
-int valore_assoluto(){
-    int n;
-    cout << "Inserisci un numero intero su cui eseguire l'operazione:" << endl;
-    cin >> n;
-    if (n >= 0)
-        cout << "Il valore assoluto di " << n << " è " << n  << endl;
-    else
-        cout << "Il valore assoluto di " << n << " è " << -n << endl;
-}
-
-
-int main(){
+int main()
+{
     int n, op;
     do
     {
@@ -36,7 +24,14 @@ int main(){
         switch (op)
         {
             case 1:
-                valore_assoluto();
+            {
+                cout << "Inserisci un numero intero su cui eseguire l'operazione:" << endl;
+                cin >> n;
+                if (n >= 0)
+                    cout << "Il valore assoluto di " << n << " è " << n  << endl;
+                else
+                    cout << "Il valore assoluto di " << n << " è " << -n << endl;
+            }
                 break;
             case 2:
             {
@@ -83,6 +78,5 @@ int main(){
         }
     }
     while (op != 5);
-
 return 0;
 }
